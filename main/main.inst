@@ -1,0 +1,4 @@
+{
+    "type": "pip",
+    "packages": ["discord.py"]
+}
