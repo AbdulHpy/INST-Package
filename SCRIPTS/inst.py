@@ -15,7 +15,7 @@ def compute():
         yield
 
 
-
+os.system('git pull')
 bs = input("Run an INST command (help, install) ")
 if bs == "install":
     try:
@@ -91,12 +91,12 @@ if bs == "install":
 
 
 
-elif file == None:
+elif bs == None:
     try:
         print("COMMANDS\n-help\n-install")
     except KeyboardInterrupt:
         print("\n⚠ Terminating program")
-elif file == "help":
+elif bs == "help":
     try:
         print("COMMANDS\n-help\n-install")
     except KeyboardInterrupt:
