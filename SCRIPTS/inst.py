@@ -14,6 +14,7 @@ def compute():
         time.sleep(.1)
         yield
 
+version = "2.0.0"
 
 os.system('git pull')
 bs = input("Run an INST command (help, install) ")
@@ -98,7 +99,7 @@ elif bs == None:
         print("\n⚠ Terminating program")
 elif bs == "help":
     try:
-        print("COMMANDS\n-help\n-install")
+        print("--Welcome to INST package manager--\nThis software helps developers install install packages with precision\nCOMMANDS:\ninstall [args]: Installs requested packages\nhelp: Shows this command (do help [command] for help on a specific command)\nThis software is completely free and available for review and download here: https://github.com/DevCairo/dcpd")
     except KeyboardInterrupt:
         print("\n⚠ Terminating program")
 
