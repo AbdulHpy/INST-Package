@@ -1,0 +1,2 @@
+[mirrors]
+server = https://mirrors.devcairo.xyz/windows/{arch}/{repo}.zip
