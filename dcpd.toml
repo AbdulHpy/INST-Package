@@ -1,14 +1,5 @@
-# Created for dcpd
-
-[info]
-
-website = "https://pkg.devcairo.xyz"
+[package]
+name = "dcpd"
+link = "https://github.com/DevCairo/dcpd"
+version = "1.0.0"
 authors = "DevCairo, Jake"
-config = "config.cfg"
-license = "GPL v3"
-dob = "2021-05-18"
-version = 2021.1
-
-[mirrors]
-server = "https://mirrors.devcairo.xyz/{os}/{arch}/{file}"
-

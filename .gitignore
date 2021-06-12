@@ -1,2 +1,7 @@
 /target
 .vscode/
+src/libs/fail
+tests/
+build
+dcpd.spec
+configuration.spec
