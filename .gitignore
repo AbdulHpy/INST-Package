@@ -5,3 +5,4 @@ tests/
 build
 dcpd.spec
 configuration.spec
+*.dblite

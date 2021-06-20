@@ -1,0 +1,49 @@
+import platform
+import shutil
+import time
+import os
+
+
+try:
+    if platform.system() == "Windows":
+        print("===> pyinstaller --hidden-import git --hidden-import toml --hidden-import remover --hidden-import list --hidden-import reader --onefile src/dcpd.py --icon src/logo.ico")
+        print("===> pyinstaller --hidden-import git --hidden-import List --hidden-import toml --onefile configuration.py --icon src/logo.ico")
+        os.system("pyinstaller --hidden-import git --hidden-import toml --hidden-import remover --hidden-import list --hidden-import reader --onefile src/dcpd.py --icon src/logo.ico")
+        os.system("pyinstaller --hidden-import git --hidden-import List --hidden-import toml --onefile configuration.py --icon src/logo.ico")
+        time.sleep(3)
+        if os.path.exists("bin/Win64/app/dcpd.exe"):
+            print("[ WARN ] Removing old files..")
+            if os.path.exists("bin/Win64/configuration.exe"):
+                os.remove("bin/Win64/configuration.exe")
+            os.remove("bin/Win64/app/dcpd.exe")
+        print("===> move dist/dcpd.exe bin/Win64/app")
+        print("===> move dist/configuration.exe bin/Win64/app")
+        shutil.move("dist/dcpd.exe", "bin/Win64/app")
+        shutil.move("dist/configuration.exe", "bin/Win64")
+        print("[ WARN ] Cleaning up..")
+        print("===> rmdir dist/")
+        print("===> rm -r build/")
+        os.rmdir("dist/")
+        shutil.rmtree("build/")
+    elif platform.system() == "Linux":
+        print("===> pyinstaller --hidden-import git --hidden-import toml --hidden-import remover --hidden-import list --hidden-import reader --onefile src/dcpd.py --icon src/logo.ico")
+        print("===> pyinstaller --hidden-import git --hidden-import List --hidden-import toml --onefile configuration.py --icon src/logo.ico")
+        os.system("pyinstaller --hidden-import git --hidden-import toml --hidden-import remover --hidden-import list --hidden-import reader --onefile src/dcpd.py --icon src/logo.ico")
+        os.system("pyinstaller --hidden-import git --hidden-import List --hidden-import toml --onefile configuration.py --icon src/logo.ico")
+        time.sleep(3)
+        if os.path.exists("bin/Linux64/app/dcpd"):
+            print("[ WARN ] Removing old files..")
+            if os.path.exists("bin/Linux64/configuration"):
+                os.remove("bin/Linux64/configuration")
+            os.remove("bin/Linux64/app/dcpd")
+        print("===> move dist/dcpd bin/Linux64/app")
+        print("===> move dist/configuration bin/Linux64/app")
+        shutil.move("dist/dcpd", "bin/Linux64/app")
+        shutil.move("dist/configuration", "bin/Linux64")
+        print("[ WARN ] Cleaning up..")
+        print("===> rmdir dist/")
+        print("===> rm -r build/")
+        os.rmdir("dist/")
+        shutil.rmtree("build/")
+except Exception as e:
+    print(f"[ ERR ] {e}")

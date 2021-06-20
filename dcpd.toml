@@ -3,3 +3,12 @@ name = "dcpd"
 link = "https://github.com/DevCairo/dcpd"
 version = "1.0.0"
 authors = "DevCairo, Jake"
+pkgmanager = "pip"
+command = "install"
+
+dependencies = ['GitPython', 'toml']
+
+instructions = [
+    'echo Hello World!',
+    'mkdir dcpd'
+]
