@@ -1,0 +1,33 @@
+import platform
+import os
+
+class LinuxBuild():
+    def __init__():
+        pass
+
+
+    async def compileParse():
+        os.system("pyinstaller parse.py --icon img/logo.png --hidden-import git --hidden-import toml")
+        if os.path.exists("LinuxBuild/parse"):
+            os.system("rm -r LinuxBuild/*")
+        os.system("mv dist/parse/* LinuxBuild")
+        print("Finished compiling")
+
+    async def compileDownloader():
+        os.system("pyinstaller utils/downloader.py --icon --hidden-import git --hidden-import toml")
+
+
+    async def buildmv():
+        os.system("mv build/parse/parse LinuxBuild")
+        os.system("mv build/")
+
+
+class WinBuild():
+    def __init__():
+        pass
+
+
+
+
+if __name__ == "__main__":
+    pass

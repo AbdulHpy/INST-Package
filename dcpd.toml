@@ -1,5 +1,9 @@
 [package]
-name = "dcpd"
-link = "https://github.com/DevCairo/dcpd"
-version = "1.0.0"
-authors = "DevCairo, Jake"
+name = 'dcpd'
+version = '1.1'
+authors = 'me'
+method = "curl"
+link = 'https://github.com/DevCairo/dotfiles/archive/refs/heads/main.zip'
+type = 'zip'
+dependencies = ['hi', 'bye']
+

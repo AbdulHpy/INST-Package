@@ -5,3 +5,5 @@ tests/
 build
 dcpd.spec
 configuration.spec
+Unsupported/
+__pycache__/
